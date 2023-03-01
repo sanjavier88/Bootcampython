@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>lista_contactos</title>
+        </head style="margin:0; padding=0; box-sizing: border-box;">
+    <body>
+
+        <center>
+            <div class="max-w-3xl mb-20 mx-auto text-center">
+                    <span class="text-xs text-blue-400 font-semibold"><a href="/create">Nuevo contacto</a></span>
+                    <h1>Lista de contactos </h1>
+                </div>
+           
+        </center>
+
+        {% for contact in contacts %}
+        <section class="form-register" style=" width: 400px;background: #24303c;padding: 30px;margin: 20px; margin-top: 100px; border-radius: 4px; font-family: 'calibri';color: white;box-shadow: 7px 13px 37px #000;">
+           
+            <h2 class="mb-4 text-2xl font-semibold font-heading">{{ contact.nombre}}</h2>
+            <span class="inline-block mb-4 text-xs text-gray-500">{{ contact.numero}}</span>
+            <p class="mb-4 text-gray-500 leading-relaxed">contac.numero</p>
+            <section>
+                <a class="text-lg font-medium text-yellow-500 underline hover:no-underline" style="color: #DAF7A6;" href="/contacts/update/{{ contact.id }} ">Editar</a>
+                <a class="text-lg font-medium text-red-500 underline hover:no-underline" href="#" style="color:  #DAF7A6;">Eliminar</a>
+            </section> 
+        </section>
+        {% endblock %}
+    </body>
+</html>
